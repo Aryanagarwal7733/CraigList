@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home as HomeIcon, Briefcase, Car, Users, ShoppingCart, HeartHandshake } from 'lucide-react';
+import EventCalendar from '../components/EventCalendar';
 import './Home.css';
 
 const MOCK_CATEGORIES = [
@@ -22,6 +23,7 @@ const Home = () => {
       <div className="category-grid">
         {MOCK_CATEGORIES.map(cat => (
           <div key={cat.id} className="card category-card">
+            {/* Category content */}
             <div className="category-header">
               <div className="category-icon-wrapper">{cat.icon}</div>
               <h2>{cat.name}</h2>
@@ -35,6 +37,8 @@ const Home = () => {
           </div>
         ))}
       </div>
+
+      <EventCalendar />
     </div>
   );
 };
