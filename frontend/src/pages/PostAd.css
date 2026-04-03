@@ -1,0 +1,86 @@
+.post-ad-container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.post-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.post-header p {
+    color: var(--text-secondary);
+}
+.post-form {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+.post-form input, .post-form select, .post-form textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.post-form input:focus, .post-form select:focus, .post-form textarea:focus {
+    border-color: var(--accent-primary);
+}
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+.half-width {
+    flex: 1;
+}
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-muted);
+}
+.input-with-icon input {
+    padding-left: 2.5rem;
+}
+.image-upload-area {
+    border: 2px dashed var(--border-light);
+    padding: 3rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.02);
+    transition: background 0.2s;
+}
+.image-upload-area:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+.submit-btn {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+.success-msg {
+    background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;
+}
