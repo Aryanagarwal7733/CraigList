@@ -21,5 +21,11 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'OK' });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// For Vercel, we export the app instead of calling listen directly if possible.
+// However, the standard Vercel Node wrapper detects the app object.
+module.exports = app;
+
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}

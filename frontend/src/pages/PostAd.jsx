@@ -3,6 +3,8 @@ import { Camera, MapPin } from 'lucide-react';
 import { AuthContext } from '../context/AuthContext';
 import './PostAd.css';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+
 const PostAd = () => {
   const { user } = useContext(AuthContext);
   const [formData, setFormData] = useState({
@@ -35,7 +37,7 @@ const PostAd = () => {
             location: { city: formData.location }
         };
 
-        const res = await fetch('http://localhost:5000/api/listings', {
+        const res = await fetch(`${API_BASE_URL}/api/listings`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
